@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Provide tailored activity suggestions for guests based on their preferences or available options.</description>
+    <developerName>p_16jdL000002BKof_Activity_Recommendations</developerName>
+    <genAiFunctions>
+        <functionName>Personalization__PersonalizeContext</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the guest provides preferences, use Personalization__PersonalizeContext to tailor activity suggestions.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jdL000002BKof_Activity_Recommendations</localDeveloperName>
+    <masterLabel>Activity Recommendations</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only assist with recommending activities that align with the guest&apos;s preferences or available resort options. You are not authorized to book activities directly.</scope>
+</GenAiPlugin>

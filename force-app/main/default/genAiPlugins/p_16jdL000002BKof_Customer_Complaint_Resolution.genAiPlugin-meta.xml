@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Handle customer complaints and provide resolutions by identifying the customer and any associated cases or orders.</description>
+    <developerName>p_16jdL000002BKof_Customer_Complaint_Resolution</developerName>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__IdentifyCustomerByEmail</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__GetCaseByCaseNumber</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__AddCaseComment</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query includes a customer email, use SvcCopilotTmpl__IdentifyCustomerByEmail to identify the customer.</description>
+        <developerName>instruction_0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer provides a case number, use SvcCopilotTmpl__GetCaseByCaseNumber to retrieve the case details.</description>
+        <developerName>instruction_1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_1</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer requests to add a comment to an existing case, use SvcCopilotTmpl__AddCaseComment.</description>
+        <developerName>instruction_2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_2</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>p_16jdL000002BKof_Customer_Complaint_Resolution</localDeveloperName>
+    <masterLabel>Customer Complaint Resolution</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only assist with identifying customers, retrieving related cases or orders, and adding comments to existing cases. You are not authorized to escalate cases or make decisions that require managerial approval.</scope>
+</GenAiPlugin>

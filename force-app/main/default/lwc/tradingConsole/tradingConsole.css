@@ -1,0 +1,115 @@
+/* Trading Console Styles */
+
+/* Price Cards */
+.price-card {
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+}
+
+.price-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.price-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #00d4ff;
+}
+
+/* Change indicators */
+.change-positive {
+    color: #04e762;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.change-negative {
+    color: #ff4757;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.change-neutral {
+    color: #a0a0a0;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Signal badges */
+.signal-buy {
+    --slds-c-badge-color-background: #04e762;
+    --slds-c-badge-text-color: #000;
+}
+
+.signal-sell {
+    --slds-c-badge-color-background: #ff4757;
+    --slds-c-badge-text-color: #fff;
+}
+
+.signal-hold {
+    --slds-c-badge-color-background: #ffa502;
+    --slds-c-badge-text-color: #000;
+}
+
+/* Action badges */
+.action-buy {
+    --slds-c-badge-color-background: #04e762;
+    --slds-c-badge-text-color: #000;
+}
+
+.action-sell {
+    --slds-c-badge-color-background: #ff4757;
+    --slds-c-badge-text-color: #fff;
+}
+
+.action-hold {
+    --slds-c-badge-color-background: #ffa502;
+    --slds-c-badge-text-color: #000;
+}
+
+/* Status bar */
+.status-bar {
+    background: #f3f3f3;
+    border-radius: 8px;
+    padding: 0.75rem;
+}
+
+/* Section titles */
+.slds-section__title {
+    background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 4px;
+}
+
+.slds-section__title span {
+    color: white;
+    font-weight: 600;
+}
+
+/* Table styling */
+.slds-table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slds-table thead tr {
+    background: #1a1a2e;
+}
+
+.slds-table thead th {
+    color: white;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .price-value {
+        font-size: 1.25rem;
+    }
+
+    .slds-section__title span {
+        font-size: 0.875rem;
+    }
+}

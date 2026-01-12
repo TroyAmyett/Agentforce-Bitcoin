@@ -1,0 +1,182 @@
+<template>
+    <lightning-card title="Crypto Trading Console" icon-name="custom:custom41">
+        <!-- Header with controls -->
+        <div slot="actions">
+            <lightning-button-group>
+                <lightning-button
+                    label="Refresh"
+                    icon-name="utility:refresh"
+                    onclick={handleRefresh}
+                    disabled={isLoading}>
+                </lightning-button>
+                <lightning-button
+                    label="Run Agent Swarm"
+                    icon-name="utility:apex"
+                    variant="brand"
+                    onclick={handleRunSwarm}
+                    disabled={isSwarmRunning}>
+                </lightning-button>
+            </lightning-button-group>
+        </div>
+
+        <div class="slds-p-around_medium">
+            <!-- Status Bar -->
+            <div class="status-bar slds-m-bottom_medium">
+                <div class="slds-grid slds-wrap slds-gutters">
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
+                        <div class="slds-box slds-box_x-small">
+                            <p class="slds-text-title_caps slds-m-bottom_xx-small">Status</p>
+                            <lightning-badge
+                                label={swarmStatus}
+                                icon-name={statusIcon}>
+                            </lightning-badge>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
+                        <div class="slds-box slds-box_x-small">
+                            <p class="slds-text-title_caps slds-m-bottom_xx-small">Last Refresh</p>
+                            <p class="slds-text-body_regular">{lastRefresh}</p>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <div class="slds-box slds-box_x-small">
+                            <lightning-input
+                                type="text"
+                                label="Symbols"
+                                value={selectedSymbols}
+                                onchange={handleSymbolChange}
+                                placeholder="BTC,ETH,SOL"
+                                field-level-help="Comma-separated crypto symbols">
+                            </lightning-input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <div class="slds-align_absolute-center slds-m-vertical_large">
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <!-- Error Message -->
+            <template if:true={errorMessage}>
+                <div class="slds-notify slds-notify_alert slds-alert_error slds-m-bottom_medium" role="alert">
+                    <span class="slds-assistive-text">error</span>
+                    <lightning-icon icon-name="utility:error" alternative-text="error" size="x-small"></lightning-icon>
+                    <h2>{errorMessage}</h2>
+                </div>
+            </template>
+
+            <!-- Price Cards Section -->
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Live Prices">
+                        <lightning-icon icon-name="utility:trending" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                        Live Prices
+                    </span>
+                </h3>
+                <div class="slds-section__content">
+                    <template if:true={hasPrices}>
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <template for:each={prices} for:item="price">
+                                <div key={price.Id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-m-bottom_small">
+                                    <div class="price-card slds-box slds-theme_default">
+                                        <div class="slds-grid slds-grid_align-spread">
+                                            <div>
+                                                <h4 class="slds-text-heading_medium">{price.Symbol__c}</h4>
+                                                <p class="price-value">{price.formattedPrice}</p>
+                                            </div>
+                                            <div class="slds-text-align_right">
+                                                <p class={price.changeClass}>{price.formattedChange}</p>
+                                                <lightning-badge
+                                                    label={price.Signal__c}
+                                                    class={price.signalClass}>
+                                                </lightning-badge>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                    <template if:false={hasPrices}>
+                        <div class="slds-illustration slds-illustration_small">
+                            <p class="slds-text-body_regular slds-text-color_weak">
+                                No price data available. Click "Run Agent Swarm" to fetch prices.
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <!-- Trading Signals Section -->
+            <template if:true={signals.length}>
+                <div class="slds-section slds-is-open slds-m-top_medium">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Trading Signals">
+                            <lightning-icon icon-name="utility:signal" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                            Latest Trading Signals
+                        </span>
+                    </h3>
+                    <div class="slds-section__content">
+                        <lightning-datatable
+                            key-field="symbol"
+                            data={signals}
+                            columns={signalColumns}
+                            hide-checkbox-column>
+                        </lightning-datatable>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Recent Trades Section -->
+            <div class="slds-section slds-is-open slds-m-top_medium">
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Recent Trades">
+                        <lightning-icon icon-name="utility:list" size="x-small" class="slds-m-right_x-small"></lightning-icon>
+                        Recent Trades
+                    </span>
+                </h3>
+                <div class="slds-section__content">
+                    <template if:true={hasTrades}>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th scope="col"><div class="slds-truncate">Trade #</div></th>
+                                    <th scope="col"><div class="slds-truncate">Symbol</div></th>
+                                    <th scope="col"><div class="slds-truncate">Action</div></th>
+                                    <th scope="col"><div class="slds-truncate">Price</div></th>
+                                    <th scope="col"><div class="slds-truncate">Momentum</div></th>
+                                    <th scope="col"><div class="slds-truncate">Executed</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={trades} for:item="trade">
+                                    <tr key={trade.Id}>
+                                        <td>{trade.Name}</td>
+                                        <td><strong>{trade.Symbol__c}</strong></td>
+                                        <td>
+                                            <lightning-badge label={trade.Action__c} class={trade.actionClass}></lightning-badge>
+                                        </td>
+                                        <td>{trade.formattedPrice}</td>
+                                        <td>{trade.Momentum__c}</td>
+                                        <td>{trade.formattedDate}</td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </template>
+                    <template if:false={hasTrades}>
+                        <div class="slds-illustration slds-illustration_small">
+                            <p class="slds-text-body_regular slds-text-color_weak">
+                                No trades recorded yet.
+                            </p>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

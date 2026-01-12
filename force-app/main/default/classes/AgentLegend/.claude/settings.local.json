@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(sf project deploy start:*)",
+      "Bash(sf apex run:*)",
+      "Bash(sf project retrieve start:*)"
+    ]
+  }
+}

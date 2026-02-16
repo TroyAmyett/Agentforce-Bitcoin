@@ -1,0 +1,63 @@
+<apex:page controller="SPAuthController"
+           action="{!checkSession}"
+           showHeader="false" sidebar="false" standardStylesheets="false"
+           applyHtmlTag="true" applyBodyTag="true" docType="html-5.0"
+           cache="false">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{!companyName} - Support Portal</title>
+
+    <apex:outputPanel rendered="{!NOT(ISBLANK(faviconUrl))}">
+        <link rel="icon" href="{!faviconUrl}" />
+    </apex:outputPanel>
+
+    <!-- Server-rendered portal config for the React app -->
+    <script>
+        window.SP_CONFIG = {
+            sessionActive: '{!sessionActive}',
+            userId: '{!userId}',
+            userName: '{!JSENCODE(userName)}',
+            userRole: '{!JSENCODE(userRole)}',
+            portalName: 'Support Portal',
+            brandColor: '#0ea5e9',
+            logoUrl: '{!JSENCODE(logoUrl)}',
+            agentforceEnabled: '{!agentforceEnabled}',
+            agentforceMode: '{!JSENCODE(agentforceMode)}',
+            themeJson: '{!JSENCODE(themeJson)}',
+            companyName: '{!JSENCODE(companyName)}',
+            supportEmail: '{!JSENCODE(supportEmail)}',
+            supportPhone: '{!JSENCODE(supportPhone)}',
+            registrationMode: '{!JSENCODE(registrationMode)}',
+            showAdminInPortal: '{!showAdminInPortal}'
+        };
+        console.log('[SP_DEBUG] agentforceEnabled:', window.SP_CONFIG.agentforceEnabled, 'agentforceMode:', window.SP_CONFIG.agentforceMode);
+    </script>
+
+    <!-- React App CSS -->
+    <apex:stylesheet value="{!URLFOR($Resource.SP_Portal, 'assets/index.css')}" />
+</head>
+
+<div id="root"></div>
+
+<!-- React App JS -->
+<script src="{!URLFOR($Resource.SP_Portal, 'assets/index.js')}"></script>
+
+<!-- Agentforce Embedded Chat: Salesforce Messaging for Web -->
+<apex:outputPanel rendered="{!agentforceEnabled && agentforceMode == 'messaging' && NOT(ISBLANK(agentforceScriptUrl))}">
+    <script type="text/javascript" src="{!agentforceScriptUrl}"></script>
+    <script type="text/javascript">
+        try {
+            embeddedservice_bootstrap.settings.language = 'en_US';
+            embeddedservice_bootstrap.init(
+                '{!JSENCODE(agentforceOrgId)}',
+                '{!JSENCODE(agentforceDeploymentName)}',
+                '{!JSENCODE(agentforceSiteUrl)}',
+                { scrt2URL: '{!JSENCODE(agentforceScrtUrl)}' }
+            );
+        } catch(err) {
+            console.error('Agentforce Messaging init failed:', err);
+        }
+    </script>
+</apex:outputPanel>
+</apex:page>

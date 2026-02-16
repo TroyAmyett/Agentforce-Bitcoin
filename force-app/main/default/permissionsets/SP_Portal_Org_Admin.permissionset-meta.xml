@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants Salesforce org administrators the ability to assign the Super Admin role to Support Portal users directly from the Salesforce UI. Assign this to the System Administrator profile or specific users who manage the portal.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SP Portal Org Admin</label>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>SP_Manage_Super_Admin</name>
+    </customPermissions>
+</PermissionSet>

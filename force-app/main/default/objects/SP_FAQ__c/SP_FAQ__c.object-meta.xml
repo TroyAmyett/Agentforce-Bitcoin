@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Support Portal FAQ</label>
+    <pluralLabel>Support Portal FAQs</pluralLabel>
+    <nameField>
+        <displayFormat>FAQ-{00000}</displayFormat>
+        <label>FAQ Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableReports>true</enableReports>
+    <sharingModel>ReadWrite</sharingModel>
+    <description>AI-generated FAQ articles for the Support Portal Knowledge Base.</description>
+</CustomObject>

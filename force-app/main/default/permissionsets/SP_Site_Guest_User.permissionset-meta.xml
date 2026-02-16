@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Grants Salesforce Site Guest Users access to Support Portal Apex classes and Visualforce page. Object/field CRUD is handled by the Apex controllers (without sharing).</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Support Portal - Site Guest User</label>
+
+    <!-- Apex Class Access -->
+    <classAccesses>
+        <apexClass>SPUtils</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SPAuthController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SPCaseController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SPThemeController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SPAdminController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SPIdeaController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>SPAIController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+
+    <!-- VF Page Access -->
+    <pageAccesses>
+        <apexPage>SPPortal</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+
+    <!-- SP_FAQ__c Read Access (Guest User license only allows read on custom objects;
+         write operations run in system mode via without sharing controllers) -->
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <object>SP_FAQ__c</object>
+    </objectPermissions>
+    <!-- Question__c is required so FLS is automatic; remaining fields set readable -->
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SP_FAQ__c.Answer__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SP_FAQ__c.Category__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SP_FAQ__c.Sort_Order__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SP_FAQ__c.Published__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>SP_FAQ__c.Source_Document__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+</PermissionSet>

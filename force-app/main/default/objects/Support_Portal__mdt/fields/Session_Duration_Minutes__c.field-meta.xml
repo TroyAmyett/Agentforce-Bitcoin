@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Session_Duration_Minutes__c</fullName>
+    <defaultValue>30</defaultValue>
+    <description>How long a portal session remains active (in minutes) before requiring re-login.</description>
+    <inlineHelpText>Number of minutes a portal session stays active before the user must log in again. Default is 30. Sessions are extended on each page action.</inlineHelpText>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Session Duration (Minutes)</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enable_Agentforce_Chat__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Whether to show the Agentforce chat widget on portal pages.</description>
+    <inlineHelpText>When checked, the chat widget appears on portal pages. The chat mode (Built-in, Messaging for Web, or AI Assistant) is configured in Portal Settings within the portal admin UI.</inlineHelpText>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Enable Agentforce Chat</label>
+    <type>Checkbox</type>
+</CustomField>

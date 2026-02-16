@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Default</label>
+    <protected>false</protected>
+    <values>
+        <field>Registration_Mode__c</field>
+        <value xsi:type="xsd:string">Self_Register</value>
+    </values>
+    <values>
+        <field>Case_Visibility__c</field>
+        <value xsi:type="xsd:string">User_Only</value>
+    </values>
+    <values>
+        <field>Session_Duration_Minutes__c</field>
+        <value xsi:type="xsd:double">30.0</value>
+    </values>
+    <values>
+        <field>Support_Email__c</field>
+        <value xsi:type="xsd:string">support@funnelists.com</value>
+    </values>
+    <values>
+        <field>Enable_Agentforce_Chat__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Customer_Account_RecordType__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Email_On_Behalf_Of__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Support_Phone__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Customer_Contact_RecordType__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Show_Admin_In_Portal__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

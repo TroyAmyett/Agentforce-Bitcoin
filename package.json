@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "Salesforce App",
   "scripts": {
+    "build": "npm run build --prefix react-app",
+    "dev": "npm run dev --prefix react-app",
+    "portal:install": "npm install --prefix react-app",
     "lint": "eslint **/{aura,lwc}/**/*.js",
     "test": "npm run test:unit",
     "test:unit": "sfdx-lwc-jest",
@@ -16,7 +19,7 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
-    "@lwc/eslint-plugin-lwc": "^3.1.0",
+    "@lwc/eslint-plugin-lwc": "^2.0.1",
     "@prettier/plugin-xml": "^3.4.1",
     "@salesforce/eslint-config-lwc": "^4.0.0",
     "@salesforce/eslint-plugin-aura": "^3.0.0",
@@ -38,7 +41,7 @@
       "eslint"
     ],
     "**/lwc/**": [
-        "sfdx-lwc-jest -- --bail --findRelatedTests --passWithNoTests"
+      "sfdx-lwc-jest -- --bail --findRelatedTests --passWithNoTests"
     ]
   }
 }

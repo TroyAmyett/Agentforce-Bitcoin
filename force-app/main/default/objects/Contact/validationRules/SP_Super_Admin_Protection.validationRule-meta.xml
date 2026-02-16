@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SP_Super_Admin_Protection</fullName>
+    <active>true</active>
+    <description>Prevents Salesforce users from setting SP_Role__c to Super Admin unless they have the SP_Manage_Super_Admin custom permission. The Sites guest user is exempt because portal access is already controlled by Apex authorization checks in SPAdminController.</description>
+    <errorConditionFormula>AND(
+    ISCHANGED(SP_Role__c),
+    ISPICKVAL(SP_Role__c, &quot;Super Admin&quot;),
+    TEXT($User.UserType) &lt;&gt; &quot;Guest&quot;,
+    NOT($Permission.SP_Manage_Super_Admin)
+)</errorConditionFormula>
+    <errorDisplayField>SP_Role__c</errorDisplayField>
+    <errorMessage>Only authorized administrators with the &quot;SP Manage Super Admin&quot; permission can assign the Super Admin role. Contact your Salesforce administrator.</errorMessage>
+</ValidationRule>

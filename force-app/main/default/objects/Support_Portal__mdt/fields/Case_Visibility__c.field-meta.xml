@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Visibility__c</fullName>
+    <description>Controls which Cases a portal user can see. User_Only shows only their Cases. Company_Wide shows all Cases on their Account.</description>
+    <inlineHelpText>User_Only: portal users see only Cases they submitted. Company_Wide: users see all Cases on their Account (useful for team visibility).</inlineHelpText>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Case Visibility</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>User_Only</fullName>
+                <default>true</default>
+                <label>User Only</label>
+            </value>
+            <value>
+                <fullName>Company_Wide</fullName>
+                <default>false</default>
+                <label>Company Wide</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

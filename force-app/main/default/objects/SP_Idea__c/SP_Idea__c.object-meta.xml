@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Support Portal Idea</label>
+    <pluralLabel>Support Portal Ideas</pluralLabel>
+    <nameField>
+        <displayFormat>IDEA-{00000}</displayFormat>
+        <label>Idea Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableReports>true</enableReports>
+    <sharingModel>ReadWrite</sharingModel>
+    <description>Feature requests and improvement ideas submitted through the Support Portal.</description>
+</CustomObject>

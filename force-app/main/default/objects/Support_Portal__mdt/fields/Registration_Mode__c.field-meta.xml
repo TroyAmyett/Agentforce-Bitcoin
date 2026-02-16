@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Registration_Mode__c</fullName>
+    <description>Controls how new portal users are created. Self_Register matches email domain to existing Accounts. Invite_Only requires pre-existing Contacts (admin provisions). Account_Contact creates both (legacy). Existing_Only requires pre-existing Contacts (legacy).</description>
+    <inlineHelpText>Self_Register: users sign up and are matched to existing Accounts by email domain. Invite_Only: users must already exist as Contacts (admin provisions from Salesforce). Account_Contact (legacy): creates new Account + Contact. Existing_Only (legacy): requires pre-existing Contacts.</inlineHelpText>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Registration Mode</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Self_Register</fullName>
+                <default>true</default>
+                <label>Self-Register (Domain Match)</label>
+            </value>
+            <value>
+                <fullName>Invite_Only</fullName>
+                <default>false</default>
+                <label>Invite Only</label>
+            </value>
+            <value>
+                <fullName>Account_Contact</fullName>
+                <default>false</default>
+                <label>Account + Contact (Legacy)</label>
+            </value>
+            <value>
+                <fullName>Person_Account</fullName>
+                <default>false</default>
+                <label>Person Account</label>
+            </value>
+            <value>
+                <fullName>Existing_Only</fullName>
+                <default>false</default>
+                <label>Existing Contacts Only (Legacy)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

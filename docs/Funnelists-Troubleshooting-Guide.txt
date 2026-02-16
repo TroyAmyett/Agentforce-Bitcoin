@@ -1,0 +1,151 @@
+FUNNELISTS TROUBLESHOOTING GUIDE
+=================================
+Support: support@funnelists.com
+
+This guide covers common issues and solutions for all Funnelists products.
+
+
+RADAR TROUBLESHOOTING
+======================
+
+Issue: Sources not refreshing or showing errors
+Solution: Check the source health indicator next to each source. If it shows consecutive failures, the RSS feed URL or YouTube channel may have changed. Try removing and re-adding the source with an updated URL. Click the refresh icon on individual sources to retry.
+
+Issue: YouTube video transcripts not loading
+Solution: Not all YouTube videos have transcripts available. Transcripts are only extracted from videos that have closed captions (auto-generated or manual). Videos without captions will show the video title and description only, without an AI summary.
+
+Issue: Polymarket predictions not appearing
+Solution: Polymarket data requires the Polymarket source to be enabled in Source Management. Sports-related predictions are automatically filtered out. If no predictions appear, check that Polymarket is accessible from your network.
+
+Issue: AI summaries not generating
+Solution: AI summaries are powered by Claude AI. If summaries are missing, the content may have been too short to summarize, or there may be a temporary API issue. Try refreshing the source. Summaries are generated at content fetch time and cached.
+
+Issue: Email digests not arriving
+Solution: Check Settings > Email Digests to verify your email is correct and digests are enabled. Check your spam/junk folder. Digests are sent at the configured time in your selected timezone. Verify the correct timezone is set in Settings.
+
+Issue: Topic filters not working as expected
+Solution: Radar has three filter modes: All Mode (shows everything except excluded), Selection Mode (shows only selected), and Color Group Toggle. Make sure you're in the correct filter mode. Click the filter icon to switch modes.
+
+Issue: Content dashboard loading slowly
+Solution: If you have many sources (close to the 50 limit), the dashboard may take longer to load. Try reducing density level from "dense" to "comfortable" for fewer items per page. Clear your browser cache and ensure a stable internet connection.
+
+Issue: "What's Hot" items not appearing for team members
+Solution: Only admins can publish to "What's Hot." Published items should be visible to all team members. If items aren't showing, the team member may need to refresh their page or check their topic filters aren't hiding the content.
+
+
+CANVAS TROUBLESHOOTING
+========================
+
+Issue: Image generation failing or timing out
+Solution: Check that your API key is valid in Settings. Canvas supports OpenAI DALL-E 3, Stability AI, and Replicate Flux — ensure the key matches the selected provider. Large images or complex prompts may take longer. Try a simpler prompt or smaller dimensions first.
+
+Issue: Brand colors not being applied to generated images
+Solution: Make sure you have an active Brand Style Guide selected. Go to Brand Management and verify a guide is set as active. The brand theme application works best with the "Brand theme application with color enforcement" option enabled in the Image Generator settings.
+
+Issue: Background removal not working cleanly
+Solution: Canvas uses color-key based background removal. It works best on images with solid, uniform backgrounds. Adjust the tolerance slider for better results. For images with complex or gradient backgrounds, you may need to manually clean up edges.
+
+Issue: Outpaint/Extend Canvas producing poor results
+Solution: Adjust the creativity slider — lower values preserve more of the original image while higher values give the AI more freedom. Make sure the source image is high quality. The tool works best when extending by small amounts (e.g., from 4:3 to 16:9) rather than large extensions.
+
+Issue: Logo Generator fonts not loading
+Solution: Logo Generator uses Google Fonts which require an internet connection. If fonts appear as fallback/default, check your network connection. Try refreshing the page. Supported fonts: Inter, Montserrat, Playfair Display, Roboto, Poppins, Raleway, Open Sans, Oswald.
+
+Issue: Showcase export is blurry
+Solution: Increase the export resolution. Showcase supports 1x, 2x, and 4x resolution (base is 1920x1080). For print or high-DPI displays, use 2x or 4x. Export as PNG for best quality or WebP for smaller file size.
+
+Issue: Character Restyle producing inconsistent results
+Solution: For best results, use character photos with clean backgrounds and good lighting. The background removal step works best on photos with distinct foreground/background contrast. Try generating more variations (up to 6) to get better results.
+
+Issue: "API key invalid" or "quota exceeded" errors
+Solution: Canvas uses your own API keys for image generation. Check your account with the AI provider (OpenAI, Stability AI, or Replicate) to verify your key is active and you have remaining credits/quota. Update the key in Canvas Settings > API Keys.
+
+
+AGENTPM TROUBLESHOOTING
+=========================
+
+Issue: Notes not saving
+Solution: AgentPM auto-saves notes. If changes seem lost, check your internet connection — auto-save requires connectivity. Try manually saving with Ctrl+S (or Cmd+S on Mac). If the issue persists, check the browser console for errors.
+
+Issue: "Push to Task" not creating tasks
+Solution: Ensure you have a project selected before pushing notes to tasks. The Push to Task feature converts note content into tasks within the active project. If no project exists, create one first from the Agents module.
+
+Issue: AI agents not picking up tasks
+Solution: Tasks must be in "Pending" (Ready) status for auto-routing to work. Check that: (1) the task status is set to Pending, not Draft, (2) there are available agents with matching skills, (3) agents are not paused. Check the Agent Queue view to see which tasks are queued.
+
+Issue: Task dependencies blocking progress
+Solution: Check the Dependency Graph view to visualize blocked tasks. A task won't start until all its predecessor tasks are completed. If a predecessor is stuck, resolve it first or remove the dependency if it's no longer needed.
+
+Issue: Stale tasks stuck "In Progress"
+Solution: AgentPM automatically detects tasks stuck in "In Progress" for more than 1 hour and resets them. If a task is stuck, wait for automatic reset or manually change its status back to "Queued" to re-trigger execution.
+
+Issue: Forge not generating code
+Solution: Forge requires a well-structured PRD (Product Requirements Document) as input. Make sure your PRD includes clear requirements, acceptance criteria, and technical specifications. Forge integrates with Claude Code for implementation — ensure the integration is configured.
+
+Issue: Workflow not advancing to next step
+Solution: Workflows advance when the current step's task is marked as completed. Check that the task associated with the current step is truly completed (not just in Review). If using event-based triggers, verify the trigger conditions are met.
+
+Issue: Document export producing incorrect formatting
+Solution: Export works best with well-structured notes using proper headings, lists, and paragraphs. Avoid complex nested structures. For DOCX export, choose the correct document type (PRD, SOW, Report, Proposal) for appropriate formatting. Markdown export preserves the raw structure most faithfully.
+
+Issue: Excalidraw drawings not appearing in exports
+Solution: Excalidraw drawings embedded in notes may not export to all formats. They are best preserved in Markdown exports. For DOCX exports, drawings may need to be exported as images first and then inserted.
+
+
+LEADGEN TROUBLESHOOTING
+=========================
+
+Issue: CSV import failing or columns not mapping correctly
+Solution: Ensure your CSV file uses standard formatting (comma-separated, UTF-8 encoding). The automatic column mapper detects common field names like "Email," "Company," "Phone," etc. If mapping is incorrect, use the manual column mapper to reassign fields. Preview the first 5 rows to verify mapping before confirming.
+
+Issue: Enrichment finding no data for leads
+Solution: Enrichment works best when a company website URL is provided. Without a website, LeadGen falls back to web search which is less reliable. Common reasons for no data: (1) the website is behind a paywall or login, (2) the company has no public contact information online, (3) the website uses JavaScript-heavy rendering that the scraper cannot parse.
+
+Issue: Enrichment returning wrong contact information
+Solution: LeadGen's multi-phase scraper extracts publicly available information from websites. Outdated websites may have old contact info. Always verify enriched data before using it for outreach. Email addresses are scored and deduplicated to prioritize likely-valid addresses.
+
+Issue: Phone numbers formatted inconsistently in export
+Solution: LeadGen's smart export detects the phone number format in your original CSV and reformats enriched numbers to match (parentheses, dashes, or dots). If the original CSV had mixed formats, the export may be inconsistent. Standardize phone formats in your source CSV for best results.
+
+Issue: Leads disappearing after page refresh
+Solution: LeadGen currently stores leads in browser state. If you refresh the page or close the browser, unsaved leads may be lost. Always export your enriched data to CSV before closing the session. Persistent database storage is on the roadmap.
+
+Issue: Enrichment running slowly
+Solution: LeadGen enriches up to 4 leads in parallel. Large batches (100+ leads) will take time. The multi-phase approach means each lead may require multiple web requests. Ensure a stable internet connection. If a single lead is taking too long, it may be stuck on a slow-loading website.
+
+Issue: Social media links not found
+Solution: Social media links are extracted from the company website. If the website doesn't link to their social profiles, LeadGen won't find them. The scraper looks for Facebook, LinkedIn, Instagram, Twitter/X, YouTube, and TikTok links specifically.
+
+Issue: Address parsing splitting incorrectly
+Solution: LeadGen attempts to parse full address strings into street, city, state, and zip components. Unusual address formats (international, PO boxes, multi-line) may not parse correctly. Review parsed addresses in the lead table and correct manually if needed.
+
+
+GENERAL TROUBLESHOOTING
+=========================
+
+Issue: "Session expired" errors
+Solution: Sessions expire after 30 minutes of inactivity (configurable by admin). Simply log in again. If sessions expire too quickly, ask your Portal Admin to increase the session duration in portal settings.
+
+Issue: Forgot password / can't log in
+Solution: Click "Forgot Password?" on the login page. Enter your registered email address. A reset link will be sent that expires in 24 hours. If you don't receive the email, check your spam folder. If the issue persists, contact your Portal Admin.
+
+Issue: Pages loading slowly
+Solution: Clear your browser cache, disable unnecessary browser extensions, and ensure a stable internet connection. All Funnelists products are optimized for Chrome 90+ and recommend at least 10 Mbps internet.
+
+Issue: Features missing or grayed out
+Solution: Feature availability depends on your user role (User, Portal Admin, Super Admin). Contact your administrator if you believe you should have access to a feature.
+
+Issue: Data not appearing after recent changes
+Solution: Most Funnelists products cache data for performance. Try refreshing the page (F5 or Ctrl+R). Allow a few seconds for changes to propagate.
+
+
+CONTACTING SUPPORT
+====================
+
+If your issue isn't listed above:
+1. Create a support case at the Funnelists Support Portal
+2. Include: product name, error message (exact text or screenshot), steps to reproduce, browser and version
+3. Email support@funnelists.com for urgent issues
+4. For billing: billing@funnelists.com
+
+Support Hours: Monday-Friday, 9:00 AM - 6:00 PM Eastern Time

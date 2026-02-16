@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Account_RecordType__c</fullName>
+    <description>DeveloperName of the Account RecordType used for portal customer accounts (e.g., Customer, Business_Account).</description>
+    <inlineHelpText>Enter the DeveloperName (API Name) of the Account Record Type to assign when creating new portal customer accounts. Leave blank to use the org default. Example: Customer_Account</inlineHelpText>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Customer Account Record Type</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

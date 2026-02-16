@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body style="margin:0; padding:0; background-color:#f4f4f5; font-family:Arial,Helvetica,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f5;">
+<tr><td align="center" style="padding:24px 0;">
+
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+
+<!-- Header -->
+<tr>
+<td style="background-color:#0ea5e9; padding:24px 32px;">
+<h1 style="color:#ffffff; margin:0; font-size:22px; font-weight:bold;">Support Portal</h1>
+</td>
+</tr>
+
+<!-- Body -->
+<tr>
+<td style="padding:32px;">
+<p style="color:#333333; font-size:16px; line-height:1.6; margin:0 0 16px;">
+Hi {!Contact.FirstName},
+</p>
+<p style="color:#333333; font-size:16px; line-height:1.6; margin:0 0 16px;">
+Welcome to the Support Portal! Your account has been created and you are now logged in.
+</p>
+<p style="color:#333333; font-size:16px; line-height:1.6; margin:0 0 16px;">
+Here is what you can do:
+</p>
+<ul style="color:#333333; font-size:16px; line-height:1.8; margin:0 0 16px; padding-left:24px;">
+<li><strong>Submit support cases</strong> and track their progress</li>
+<li><strong>Browse the Knowledge Base</strong> for answers to common questions</li>
+<li><strong>Chat with our support team</strong> for real-time assistance</li>
+<li><strong>Share ideas</strong> and vote on feature requests</li>
+</ul>
+<p style="color:#333333; font-size:16px; line-height:1.6; margin:0 0 24px;">
+If you need any help getting started, do not hesitate to reach out.
+</p>
+</td>
+</tr>
+
+<!-- Footer -->
+<tr>
+<td style="background-color:#f9fafb; padding:20px 32px; border-top:1px solid #e5e7eb;">
+<p style="color:#6b7280; font-size:13px; margin:0; line-height:1.5;">
+This email was sent from the Support Portal on behalf of {!Contact.Account.Name}.<br/>
+Please do not reply directly to this email.
+</p>
+</td>
+</tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>

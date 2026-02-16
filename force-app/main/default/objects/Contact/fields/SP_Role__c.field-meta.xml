@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SP_Role__c</fullName>
+    <description>Portal access role. Super Admin has full config access, Portal Admin manages users/branding, User has standard access.</description>
+    <externalId>false</externalId>
+    <label>Portal Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>User</fullName>
+                <default>true</default>
+                <label>User</label>
+            </value>
+            <value>
+                <fullName>Portal Admin</fullName>
+                <default>false</default>
+                <label>Portal Admin</label>
+            </value>
+            <value>
+                <fullName>Super Admin</fullName>
+                <default>false</default>
+                <label>Super Admin</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

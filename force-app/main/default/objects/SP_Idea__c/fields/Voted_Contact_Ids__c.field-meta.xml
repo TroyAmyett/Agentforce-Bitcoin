@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voted_Contact_Ids__c</fullName>
+    <label>Voted Contact Ids</label>
+    <type>LongTextArea</type>
+    <length>32000</length>
+    <visibleLines>3</visibleLines>
+    <description>Comma-separated Contact IDs who voted for this idea. Managed by SPIdeaController.</description>
+</CustomField>

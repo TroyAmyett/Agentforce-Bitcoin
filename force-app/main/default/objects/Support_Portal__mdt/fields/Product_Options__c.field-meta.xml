@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Options__c</fullName>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Product Options</label>
+    <type>LongTextArea</type>
+    <length>32768</length>
+    <visibleLines>4</visibleLines>
+    <description>Comma-separated product names shown in the portal product dropdown. E.g. "Radar,Canvas,AgentPM,Resolve"</description>
+    <inlineHelpText>Comma-separated list of product names for the portal product dropdown. Example: Radar,Canvas,AgentPM,Resolve. Also editable from Portal Settings in the admin UI.</inlineHelpText>
+</CustomField>

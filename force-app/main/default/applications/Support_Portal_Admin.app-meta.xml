@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Manage Support Portal custom objects — FAQs, Ideas, and Sessions.</description>
+    <formFactors>Large</formFactors>
+    <formFactors>Small</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Support Portal</label>
+    <logo>SP_App_Logo</logo>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>SP_FAQ__c</tabs>
+    <tabs>SP_Idea__c</tabs>
+    <tabs>SP_Session__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

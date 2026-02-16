@@ -1,0 +1,354 @@
+FUNNELISTS PRODUCT SUITE - COMPLETE OVERVIEW
+=============================================
+
+Company: Funnelists LLC
+Founder: Troy Amyett
+Website: funnelists.com
+Support: support@funnelists.com
+Billing: billing@funnelists.com
+Headquarters: Hollywood, Florida
+
+ABOUT FUNNELISTS
+-----------------
+Funnelists is a suite of AI-powered SaaS products built for modern sales, marketing, and operations teams. The platform helps teams monitor information sources, generate visual assets, manage projects with AI agents, and enrich leads — all powered by artificial intelligence via the Claude AI API.
+
+All Funnelists products share a unified authentication system, single sign-on across subdomains, and a consistent dark-mode design system. Infrastructure runs on Supabase for database and authentication, Vercel for web hosting, and the Claude AI API for intelligent features.
+
+
+PRODUCT 1: RADAR - Source Intelligence & Content Aggregation
+==============================================================
+URL: radar.funnelists.com
+Category: Source Intelligence / Content Curation
+
+Radar is a source intelligence and content aggregation platform that lets users monitor multiple information streams in one unified dashboard. It aggregates content from RSS feeds, YouTube channels, and Polymarket prediction markets, applies AI-powered summaries, and enables users to organize, save, and publish curated content.
+
+KEY FEATURES:
+- Content Dashboard: Aggregated feed displaying articles, videos, and predictions in a masonry grid with 4 density levels (comfortable, cozy, compact, dense)
+- Source Management: Add and manage up to 50 sources across RSS feeds, YouTube channels, and Polymarket prediction markets
+- AI Summaries: Claude AI-powered summaries of articles and video transcripts for quick scanning
+- Topic System: Color-coded topics with auto-selected icons for organizing and filtering content (default topics include Agentforce, AI Tools, Blockchain AI, Competitors, Partners)
+- Content Interactions: Like, save, add notes, dismiss, or publish content items
+- What's Hot Publishing: Admin-curated feed of the best content, publishable to a public feed with optional social media posting
+- Saved Items Library: Bookmark content for later with full-text search across saved items
+- Email Digests: Configurable daily and weekly email digest notifications
+- Source Health Monitoring: Tracks consecutive failures and errors for each source
+- Keyboard Shortcuts: Full power-user support for zoom, refresh, and navigation
+
+CONTENT TYPES SUPPORTED:
+- RSS Feed Articles: Blog posts and news articles with thumbnails, summaries, and authors
+- YouTube Videos: Video content with automatic transcript extraction and AI summaries
+- Polymarket Predictions: Betting market predictions on real-world events with live odds
+
+RADAR GETTING STARTED:
+1. Sign up at radar.funnelists.com
+2. Create topics to organize your content (e.g., AI Tools, Competitors, Industry News)
+3. Add sources — paste RSS feed URLs, YouTube channel links, or enable Polymarket
+4. Click Refresh to pull in the latest content
+5. Browse your dashboard, like and save interesting items
+6. Admins can publish curated content to the "What's Hot" feed
+
+TOPIC FILTERING:
+Radar supports three filtering modes for topics:
+- All Mode: Show all content except excluded topics
+- Selection Mode: Show only content from selected topics
+- Color Group Toggle: Show all topics of a specific color group
+
+
+PRODUCT 2: CANVAS - AI-Powered Image Generation & Creative Studio
+===================================================================
+URL: canvas.funnelists.com
+Category: Visual Asset Creation / AI Image Generation
+
+Canvas is an AI-powered visual asset creation platform with 8 specialized tools for generating, manipulating, and exporting professional-quality images, logos, characters, and UI elements. It integrates with multiple AI image providers and includes comprehensive brand management.
+
+8 CORE TOOLS:
+
+1. Image Generator (Main Tool)
+   - Text-to-image generation using AI (supports OpenAI DALL-E 3, Stability AI, Replicate Flux)
+   - Image-to-image style transfer with adjustable strength
+   - Usage context presets: hero background, product card, icon, blog image, social media
+   - Asset types: hero image, infographic, process flow, comparison, checklist, timeline, diagram, quote card, stats highlight, icon set
+   - Style options: photorealistic, illustration, minimalist, 3D render, cinematic
+   - Brand theme application with color enforcement
+   - Dimension presets: 16:9, 21:9, 1:1, 4:3, 3:2, 9:16
+   - Asset Set Generation: generate multiple size variants in one go
+   - Generation history for reuse
+
+2. Icon Generator
+   - AI-powered icon design with batch generation
+   - Color customization and multiple export formats (PNG, SVG)
+   - Icon library management
+
+3. Logo Generator (3-Step Wizard)
+   - Step 1: Design the icon base
+   - Step 2: Create lockup with typography (Google Fonts: Inter, Montserrat, Playfair Display, Roboto, Poppins, Raleway, Open Sans, Oswald)
+   - Step 3: Export in various formats and sizes
+   - Real-time Canvas-based preview
+
+4. Characters (3-Step Wizard)
+   - AI character/avatar creation
+   - Generate multiple character variations
+   - Character library for reuse across projects
+
+5. Restyle Character
+   - Upload a character photo or load from library
+   - Automatic background removal
+   - Choose new environment settings (studio, outdoor, modern office, etc.)
+   - Generate 1-6 restyled variations
+   - Multiple aspect ratio options (16:9, 9:16, 1:1)
+
+6. Image Tools
+   - Background Removal: Color-key based with tolerance adjustment
+   - Extend Canvas (Outpaint): AI-powered image extension to target aspect ratios with creativity control
+   - Resize: Preset size groups for logos, favicons, social media, banners, and OG images, plus custom dimensions up to 8192px
+
+7. Watermarks
+   - Create and apply custom watermarks
+   - Batch watermark application with opacity control
+
+8. Showcase
+   - Professional presentation effects for screenshots
+   - 4 visual effects: Cascade (layered panels), Spotlight (floating with glow), Tilt (3D perspective), Isometric (stacked view)
+   - Export at 1x, 2x, 4x resolution in PNG or WebP
+   - CSS snippet generation for web integration
+
+BRAND MANAGEMENT:
+- Style Guides: Create and manage brand visual identities
+- Extract Brand: Auto-extract branding from a website URL or uploaded images
+- Brand Color Application: Enforce brand colors in all AI-generated images
+- Active Guide System: Switch between different brand profiles
+
+AI PROVIDERS:
+Canvas supports multiple AI image generation providers:
+- OpenAI DALL-E 3
+- Stability AI
+- Replicate (Flux models)
+- Anthropic Claude (coming soon)
+
+CANVAS GETTING STARTED:
+1. Sign up at canvas.funnelists.com
+2. Configure API keys in Settings (bring your own OpenAI, Stability AI, or Replicate key)
+3. Optionally set up a Brand Style Guide by extracting from your website
+4. Choose a tool from the sidebar (Image Generator, Logo Generator, etc.)
+5. Configure your generation settings and create
+6. Export in your desired format and size
+
+SUPPORTED BROWSERS:
+Chrome 90+, Firefox 120+, Microsoft Edge 90+, Safari 16+
+
+
+PRODUCT 3: AGENTPM - AI-Powered Project Management & Task Automation
+======================================================================
+URL: agentpm.funnelists.com
+Category: Project Management / AI Automation
+
+AgentPM is an AI-powered project management and task automation platform that combines rich note-taking with intelligent agent-based task execution. Users capture ideas in notes, break them down into executable tasks, and have AI agents autonomously execute them through configurable workflows.
+
+THREE CORE MODULES:
+
+1. Plans (Notes/Notetaker)
+   - Rich text editor powered by TipTap with slash commands
+   - Document types: tables, task lists, code blocks, callouts, bullet points
+   - Drawing/sketch support via Excalidraw integration
+   - Templates: Meeting Notes, PRD, Brainstorm, README, and more
+   - Document Export: Generate branded DOCX or Markdown documents (PRD, SOW, Report, Proposal)
+   - Push to Task: Convert note content directly into tasks for agent execution
+   - AI Chat with Notes: Ask Claude AI questions about your note content
+   - Folder Organization: Nested folders with drag-and-drop
+
+2. Agents (Task Orchestration)
+   - Dashboard: Project progress metrics, active agent status, task completion rates
+   - Projects: Organize tasks into projects linked to git repositories
+   - Tasks with 7 View Modes:
+     * Kanban: Drag-and-drop columns (Inbox, Ready, Queued, In Progress, Review, Done)
+     * List/Table: Sortable table with bulk operations
+     * Agent-Tasks: Split screen with task list and detail panel
+     * Gantt: Timeline visualization with task dependencies
+     * Calendar: Tasks organized by due date
+     * Dependency Graph: Network view showing task relationships
+     * Agent Queue: Prioritized queue of tasks ready for AI execution
+   - Task Dependencies: Finish-to-Start, Start-to-Start relationship types
+   - AI Task Decomposition: Automatically breaks complex tasks into subtasks
+   - Smart Routing: AI analyzes task complexity and routes to best-fit agent
+   - Agent Management: View agent health, pause/resume, create custom agents with skills
+   - Skills System: Reusable skill definitions, skill marketplace, assign skills to tasks
+   - Reviews: Pending review queue for approving/rejecting agent work
+   - Workflows: Visual BPM-style workflow builder with triggers (manual, event-based, scheduled)
+   - Messages: Communication between agents and users
+
+3. Forge (PRD to Code)
+   - Transforms Product Requirements Documents into working code
+   - Integrates with Claude Code for implementation
+   - Runs tests automatically
+   - Creates pull requests for review
+
+TASK EXECUTION PIPELINE:
+Draft → Pending (Ready) → Queued → In Progress → Review → Completed
+- Auto-routing unassigned tasks to best-fit AI agents
+- Parallel execution of independent subtasks
+- Stale task detection (resets stuck tasks after 1 hour)
+- Subtask chaining: automatically queues next tasks when dependencies complete
+- Workflow integration: advances workflow runs when steps complete
+
+AGENTPM GETTING STARTED:
+1. Sign up at agentpm.funnelists.com
+2. Create a project and start writing notes in the Plans editor
+3. Use "Push to Task" to convert notes into actionable tasks
+4. Organize tasks on the Kanban board or your preferred view
+5. Assign tasks to AI agents or team members
+6. Review agent work in the Reviews tab
+7. Use Forge to turn PRDs directly into code
+
+
+PRODUCT 4: LEADGEN - Lead Enrichment & Web Scraping Platform
+==============================================================
+URL: leads.funnelists.com
+Category: Sales / Lead Enrichment
+
+LeadGen is a web scraping-based lead enrichment platform that helps users import basic lead data from CSV files and automatically enrich it with detailed contact information extracted from company websites and web searches using a multi-phase scraping strategy.
+
+KEY FEATURES:
+- CSV Lead Import: Drag-and-drop CSV upload with automatic column mapping and smart field detection
+- Multi-Phase Enrichment: Automated 3-phase web scraping strategy to find comprehensive contact data
+- Lead Dashboard: Stats on total leads, enriched count, pending, and errors
+- Lead Management: Paginated table with search, status filtering, and bulk operations
+- Smart Data Export: Preserves original CSV structure while adding enriched columns
+- Manual Lead Entry: Add individual leads without CSV import
+
+MULTI-PHASE ENRICHMENT PROCESS:
+
+Phase 1 - Initial Website Scraping:
+  Extracts emails, phone numbers, social media links, addresses, and staff information from the company website
+
+Phase 2 - Deep Contact Page Scraping:
+  If basic info is missing, scrapes dedicated "Contact Us" pages and internal links for additional details
+
+Phase 2b - Staff/Team Page Scraping:
+  If no people were found, searches for staff, team, leadership, and about pages to extract names and job titles
+
+Phase 3 - Fallback Web Search:
+  If still missing critical data, uses web search to find publicly available contact information
+
+ENRICHED DATA POINTS:
+- Email addresses (scored and deduplicated)
+- Phone numbers
+- Social media URLs (Facebook, LinkedIn, Instagram, Twitter/X, YouTube, TikTok)
+- Full street addresses parsed into components (street, city, state, zip)
+- Names and job titles of staff/leadership
+- Official website URL
+
+SMART EXPORT FEATURES:
+- Preserves original CSV column order and structure
+- Detects phone number format from input data and reformats consistently
+- Detects state format (abbreviations vs. full names) and maintains consistency
+- Splits suite/apt numbers into separate columns
+- Creates "Alternate Address" columns when enriched address differs from original
+
+LEADGEN GETTING STARTED:
+1. Sign up at leads.funnelists.com
+2. Import a CSV file with your leads (company name and website are the minimum useful fields)
+3. Map CSV columns to standard lead fields using the automatic or manual mapper
+4. Select leads and click "Enrich" to start the multi-phase scraping process
+5. Review enriched data in the lead table
+6. Export the enriched CSV with all original columns plus new data
+
+
+COMING SOON: RESOLVE - Funnelists Help Desk Solution
+======================================================
+Category: Customer Support / Help Desk
+
+Resolve is the upcoming Funnelists help desk solution. More details will be announced soon. Stay tuned at funnelists.com for updates.
+
+
+FUNNELISTS SUPPORT PORTAL
+===========================
+URL: Available via your organization's Salesforce Site
+
+The Funnelists Support Portal is a self-service platform where customers can create support cases, track their status, browse knowledge articles, submit product ideas, and manage their account.
+
+HOW TO CREATE A SUPPORT CASE:
+1. Log in to the Support Portal
+2. Click "New Case" from the dashboard or navigation
+3. Select the product (Radar, Canvas, AgentPM, LeadGen, or Resolve)
+4. Choose the case type (Bug, Feature Request, Question, or Other)
+5. Enter a subject and description with as much detail as possible
+6. Set priority (Low, Medium, High, Critical)
+7. Optionally attach files (screenshots, logs, etc.)
+8. Click "Submit"
+
+CASE STATUSES:
+- New: Case has been submitted and is awaiting review
+- In Progress: A support agent is actively working on your case
+- Waiting on Customer: The support team needs additional information from you
+- Escalated: The case has been escalated to a senior engineer or product team
+- Closed: The case has been resolved
+
+RESPONSE TIME SLAs:
+- Critical: 1 hour initial response, 4 hour resolution target
+- High: 4 hour initial response, 1 business day resolution target
+- Medium: 1 business day initial response, 3 business day resolution target
+- Low: 2 business day initial response, 5 business day resolution target
+
+SUBMITTING PRODUCT IDEAS:
+Customers can submit product ideas and feature requests through the Ideas section of the portal. Ideas can be upvoted by other users, and the product team reviews the most popular ideas for inclusion in the roadmap.
+
+
+ACCOUNT SECURITY & USER ROLES
+===============================
+
+PASSWORD REQUIREMENTS:
+- Minimum 8 characters
+- At least one uppercase letter
+- At least one number
+- Passwords are stored using one-way hashing (never in plain text)
+
+CHANGING YOUR PASSWORD:
+Go to Settings > Change Password in the Support Portal. Enter your current password and your new password twice to confirm.
+
+FORGOT PASSWORD:
+Click "Forgot Password?" on the login page. Enter your email address and a reset link will be sent. The link expires after 24 hours.
+
+SESSION SECURITY:
+- Sessions expire after 30 minutes of inactivity (configurable by admin)
+- All communication uses HTTPS with TLS 1.2+
+- Two-factor authentication (2FA) is available for admin accounts
+
+USER ROLES:
+- User: Create and view own cases, submit ideas, manage profile
+- Portal Admin: All User permissions plus manage other users, view all cases, configure portal settings
+- Super Admin: All Admin permissions plus assign roles, manage branding, and configure Agentforce settings
+
+DATA PRIVACY:
+- All data is stored on Salesforce infrastructure
+- Cases are visible only to the submitter and portal administrators
+- Compliant with GDPR, CCPA, and SOC 2 standards
+- Contact support@funnelists.com for data export or deletion requests
+
+
+BILLING & SUBSCRIPTION MANAGEMENT
+====================================
+
+PAYMENT METHODS:
+- Credit card (Visa, Mastercard, American Express)
+- Annual invoicing available for Enterprise plans
+- Purchase orders accepted for Enterprise customers
+
+BILLING CYCLE:
+- Monthly: Billed on the same date each month
+- Annual: 20% discount, billed once per year
+
+FREE TRIALS:
+All plans include a 14-day free trial. No credit card required to start.
+
+UPGRADING:
+Upgrades take effect immediately. You'll be prorated for the remainder of your current billing cycle.
+
+DOWNGRADING:
+Downgrades take effect at the start of your next billing cycle. You retain access to higher-tier features until then.
+
+CANCELLATION:
+You can cancel anytime from Settings > Billing > Cancel Subscription. Your data is retained for 30 days after cancellation.
+
+CONTACT:
+For billing questions, invoicing, or purchase orders, email billing@funnelists.com.
+For product support, email support@funnelists.com or create a case in the Support Portal.

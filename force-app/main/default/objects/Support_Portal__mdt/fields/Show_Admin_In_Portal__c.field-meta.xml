@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Show_Admin_In_Portal__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Master switch: when true, Portal Admin / Super Admin users can see the admin section in the portal. When false, admin pages are hidden regardless of portal JSON config. Toggle ON in Salesforce Setup when admins need to configure portal settings, then toggle OFF for safety.</description>
+    <inlineHelpText>Master switch for the portal admin section. Check to let Portal Admins and Super Admins access admin pages. Uncheck to hide admin pages from all users. Toggle ON during setup, OFF when done for safety.</inlineHelpText>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Show Admin In Portal</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>SP_FAQ__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Report on Support Portal FAQs including categories and publish status</description>
+    <label>Portal FAQs</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>SP_FAQ__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Question__c</field>
+            <table>SP_FAQ__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Category__c</field>
+            <table>SP_FAQ__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Published__c</field>
+            <table>SP_FAQ__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Answer__c</field>
+            <table>SP_FAQ__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Sort_Order__c</field>
+            <table>SP_FAQ__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>SP_FAQ__c</table>
+        </columns>
+        <masterLabel>FAQs</masterLabel>
+    </sections>
+</ReportType>

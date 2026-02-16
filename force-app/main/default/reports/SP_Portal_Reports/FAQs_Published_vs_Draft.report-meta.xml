@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>FAQs Published vs Draft</name>
+    <description>Portal FAQs grouped by published status</description>
+    <reportType>SP_FAQs__c</reportType>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SP_FAQ__c$Published__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <columns>
+        <field>SP_FAQ__c$Question__c</field>
+    </columns>
+    <columns>
+        <field>SP_FAQ__c$Category__c</field>
+    </columns>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>SP_FAQ__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allows assigning the Super Admin role to Support Portal users via the Salesforce UI. Without this permission, SP_Role__c cannot be set to Super Admin outside the portal.</description>
+    <label>SP Manage Super Admin</label>
+</CustomPermission>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <name>Portal Users by Role</name>
+    <description>Support Portal registered users grouped by role</description>
+    <reportType>ContactList</reportType>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.SP_Role__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.SP_Username__c</field>
+    </columns>
+    <columns>
+        <field>Contact.SP_Status__c</field>
+    </columns>
+    <columns>
+        <field>Contact.SP_Last_Login__c</field>
+    </columns>
+    <columns>
+        <field>Contact.SP_Registration_Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Contact.SP_Enabled__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
